@@ -1,0 +1,17 @@
+/Users/user/RiderProjects/TelegramBotForLenses/TelegramBotForLenses/bin/Debug/net9.0/TelegramBotForLenses
+/Users/user/RiderProjects/TelegramBotForLenses/TelegramBotForLenses/bin/Debug/net9.0/TelegramBotForLenses.deps.json
+/Users/user/RiderProjects/TelegramBotForLenses/TelegramBotForLenses/bin/Debug/net9.0/TelegramBotForLenses.runtimeconfig.json
+/Users/user/RiderProjects/TelegramBotForLenses/TelegramBotForLenses/bin/Debug/net9.0/TelegramBotForLenses.dll
+/Users/user/RiderProjects/TelegramBotForLenses/TelegramBotForLenses/bin/Debug/net9.0/TelegramBotForLenses.pdb
+/Users/user/RiderProjects/TelegramBotForLenses/TelegramBotForLenses/bin/Debug/net9.0/Telegram.Bot.dll
+/Users/user/RiderProjects/TelegramBotForLenses/TelegramBotForLenses/obj/Debug/net9.0/TelegramBotForLenses.csproj.AssemblyReference.cache
+/Users/user/RiderProjects/TelegramBotForLenses/TelegramBotForLenses/obj/Debug/net9.0/TelegramBotForLenses.GeneratedMSBuildEditorConfig.editorconfig
+/Users/user/RiderProjects/TelegramBotForLenses/TelegramBotForLenses/obj/Debug/net9.0/TelegramBotForLenses.AssemblyInfoInputs.cache
+/Users/user/RiderProjects/TelegramBotForLenses/TelegramBotForLenses/obj/Debug/net9.0/TelegramBotForLenses.AssemblyInfo.cs
+/Users/user/RiderProjects/TelegramBotForLenses/TelegramBotForLenses/obj/Debug/net9.0/TelegramBotForLenses.csproj.CoreCompileInputs.cache
+/Users/user/RiderProjects/TelegramBotForLenses/TelegramBotForLenses/obj/Debug/net9.0/Telegram.2E624F34.Up2Date
+/Users/user/RiderProjects/TelegramBotForLenses/TelegramBotForLenses/obj/Debug/net9.0/TelegramBotForLenses.dll
+/Users/user/RiderProjects/TelegramBotForLenses/TelegramBotForLenses/obj/Debug/net9.0/refint/TelegramBotForLenses.dll
+/Users/user/RiderProjects/TelegramBotForLenses/TelegramBotForLenses/obj/Debug/net9.0/TelegramBotForLenses.pdb
+/Users/user/RiderProjects/TelegramBotForLenses/TelegramBotForLenses/obj/Debug/net9.0/TelegramBotForLenses.genruntimeconfig.cache
+/Users/user/RiderProjects/TelegramBotForLenses/TelegramBotForLenses/obj/Debug/net9.0/ref/TelegramBotForLenses.dll

@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Telegram.Bot" Version="22.4.4" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="bin\Debug\net9.0\appsettings.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="bin\Debug\net9.0\.gitignore" />
+    </ItemGroup>
+
+</Project>
