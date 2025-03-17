@@ -468,11 +468,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/user/Documents/GitHub/LensesBot/TelegramBotForLenses/TelegramBotForLenses/TelegramBotForLenses.csproj",
+      "projectUniqueName": "/Users/user/Documents/GitHub/LensesBot/TelegramBotForLenses/TelegramBotForLenses.csproj",
       "projectName": "TelegramBotForLenses",
-      "projectPath": "/Users/user/Documents/GitHub/LensesBot/TelegramBotForLenses/TelegramBotForLenses/TelegramBotForLenses.csproj",
+      "projectPath": "/Users/user/Documents/GitHub/LensesBot/TelegramBotForLenses/TelegramBotForLenses.csproj",
       "packagesPath": "/Users/user/.nuget/packages/",
-      "outputPath": "/Users/user/Documents/GitHub/LensesBot/TelegramBotForLenses/TelegramBotForLenses/obj/",
+      "outputPath": "/Users/user/Documents/GitHub/LensesBot/TelegramBotForLenses/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/user/.nuget/NuGet/NuGet.Config"

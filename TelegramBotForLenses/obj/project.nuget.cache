@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rZrKpKOC/6A=",
+  "dgSpecHash": "3ZFGsMQZ0Pk=",
   "success": true,
-  "projectFilePath": "/Users/user/Documents/GitHub/LensesBot/TelegramBotForLenses/TelegramBotForLenses/TelegramBotForLenses.csproj",
+  "projectFilePath": "/Users/user/Documents/GitHub/LensesBot/TelegramBotForLenses/TelegramBotForLenses.csproj",
   "expectedPackageFiles": [
     "/Users/user/.nuget/packages/microsoft.extensions.configuration.abstractions/8.0.0/microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
     "/Users/user/.nuget/packages/microsoft.extensions.configuration.binder/8.0.0/microsoft.extensions.configuration.binder.8.0.0.nupkg.sha512",

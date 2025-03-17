@@ -7,7 +7,48 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6fe2095c-7117-4899-9c91-847da1c8f29a" name="Changes" comment="" />
+    <list default="true" id="6fe2095c-7117-4899-9c91-847da1c8f29a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TelegramBotForLenses/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TelegramBotForLenses/.idea/projectSettingsUpdater.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TelegramBotForLenses/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TelegramBotForLenses/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotForLenses.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotForLenses/GetSettings.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotForLenses/Host.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotForLenses/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotForLenses/TelegramBotForLenses.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotForLenses/bin/Debug/net9.0/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotForLenses/bin/Debug/net9.0/Telegram.Bot.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotForLenses/bin/Debug/net9.0/TelegramBotForLenses" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotForLenses/bin/Debug/net9.0/TelegramBotForLenses.deps.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotForLenses/bin/Debug/net9.0/TelegramBotForLenses.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotForLenses/bin/Debug/net9.0/TelegramBotForLenses.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotForLenses/bin/Debug/net9.0/TelegramBotForLenses.runtimeconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotForLenses/obj/Debug/net9.0/.NETCoreApp,Version=v9.0.AssemblyAttributes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotForLenses/obj/Debug/net9.0/Telegram.2E624F34.Up2Date" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotForLenses/obj/Debug/net9.0/TelegramBotForLenses.AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotForLenses/obj/Debug/net9.0/TelegramBotForLenses.AssemblyInfoInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotForLenses/obj/Debug/net9.0/TelegramBotForLenses.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotForLenses/obj/Debug/net9.0/TelegramBotForLenses.GlobalUsings.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotForLenses/obj/Debug/net9.0/TelegramBotForLenses.assets.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotForLenses/obj/Debug/net9.0/TelegramBotForLenses.csproj.AssemblyReference.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotForLenses/obj/Debug/net9.0/TelegramBotForLenses.csproj.CoreCompileInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotForLenses/obj/Debug/net9.0/TelegramBotForLenses.csproj.FileListAbsolute.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotForLenses/obj/Debug/net9.0/TelegramBotForLenses.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotForLenses/obj/Debug/net9.0/TelegramBotForLenses.genruntimeconfig.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotForLenses/obj/Debug/net9.0/TelegramBotForLenses.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotForLenses/obj/Debug/net9.0/apphost" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotForLenses/obj/Debug/net9.0/ref/TelegramBotForLenses.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotForLenses/obj/Debug/net9.0/refint/TelegramBotForLenses.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotForLenses/obj/TelegramBotForLenses.csproj.nuget.dgspec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotForLenses/obj/TelegramBotForLenses.csproj.nuget.g.props" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotForLenses/obj/TelegramBotForLenses.csproj.nuget.g.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotForLenses/obj/project.assets.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotForLenses/obj/project.nuget.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotForLenses/obj/project.packagespec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotForLenses/obj/rider.project.model.nuget.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TelegramBotForLenses/obj/rider.project.restore.info" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +59,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Program.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -73,6 +117,7 @@
       <workItem from="1742129710951" duration="4053000" />
       <workItem from="1742135697038" duration="228000" />
       <workItem from="1742184258565" duration="2202000" />
+      <workItem from="1742202458071" duration="670000" />
     </task>
     <servers />
   </component>
