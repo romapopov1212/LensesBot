@@ -1,4 +1,5 @@
 using System.Globalization;
+using Microsoft.EntityFrameworkCore;
 using Telegram.Bot;
 using Telegram.Bot.Types;
 
@@ -16,8 +17,6 @@ public class Host
         _bot.StartReceiving(UpdateHandler, ErrorHandler);
     }
     
-    
-
     private async Task UpdateHandler(ITelegramBotClient bot, Update update, CancellationToken token)
     {
         if (update.Message?.Text is string messageText)
@@ -38,22 +37,37 @@ public class Host
             }
             else if (_userStates.TryGetValue(chatId, out var state) && state == "awaiting_date")
             {
-                if (DateTime.TryParseExact(messageText,
+                if ((DateTime.TryParseExact(messageText,
                         "dd.MM.yy",
                         CultureInfo.InvariantCulture,
                         DateTimeStyles.None,
-                        out var lastChangeData))
+                        out var lastChangeData)) && (lastChangeData <= DateTime.Now) && (lastChangeData <= DateTime.Now.AddDays(-14)))
                 {
-                    _userStates.Remove(chatId);
-                    await bot.SendTextMessageAsync(chatId,
-                        $"Запомнил! Ты последний раз меняла линзы {lastChangeData:d}. Буду напоминать!",
-                        cancellationToken: token);
-                    await using var db = new FileDbContext();
-                    db.Add(new Reminder()
+                    if (lastChangeData <= DateTime.Now.AddDays(-14))
                     {
-                        Date = lastChangeData,
-                    });
-                    await db.SaveChangesAsync(cancellationToken: token);
+                        await bot.SendTextMessageAsync(chatId, "Лерочка, уже прошло 2 недели, пора менять лизы!");
+                    }
+                    else
+                    {
+                        var nextDayToChangeLenses = lastChangeData.AddDays(14);
+                        _userStates.Remove(chatId);
+                        await bot.SendTextMessageAsync(chatId,
+                            $"Запомнил! Напомню {nextDayToChangeLenses}",
+                            cancellationToken: token);
+                        await using var db = new FileDbContext();
+                        db.Database.ExecuteSqlRaw("DELETE FROM Reminders");
+                        db.Add(new Reminder()
+                        {
+                            Date = nextDayToChangeLenses,
+                        });
+                        await db.SaveChangesAsync(cancellationToken: token);
+                    }
+                }
+                else
+                {
+                    await bot.SendTextMessageAsync(chatId, 
+                        $"Введи дату верно(день.месяц.год(2025->25), также дата не должна быть позже сегодняшней(сегодня {DateTime.Now:dd.MM.yy}))",
+                        cancellationToken: token);
                 }
             }
         }
