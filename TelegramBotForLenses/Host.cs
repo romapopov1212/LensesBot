@@ -1,3 +1,4 @@
+using System.Globalization;
 using Telegram.Bot;
 using Telegram.Bot.Types;
 
@@ -21,7 +22,9 @@ public class Host
         {
             if (messageText.StartsWith("/start"))
             {
-                await bot.SendTextMessageAsync(update.Message.Chat.Id, "Добро пожаловать", cancellationToken: token);
+                await bot.SendTextMessageAsync(update.Message.Chat.Id,
+                    "Лерочка! Этот бот что бы напоминать тебе о линзах! Введи /reminder что бы создать напоминание",
+                    cancellationToken: token);
             }
         } 
     }
@@ -34,4 +37,5 @@ public class Host
     
     
     private TelegramBotClient _bot;
+    private FileDbContext _dbContext;
 }

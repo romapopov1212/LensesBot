@@ -8,6 +8,15 @@
             Host newBot = new Host(token);
             newBot.Start();
             Console.ReadLine();
+
+            // using var db = new FileDbContext();
+            // db.Add(new Reminder()
+            // {
+            //     Message = "Fflfl",
+            //     Date = DateTime.Now,
+            // });
+            //
+            // db.SaveChanges();
         }
     }
 }
