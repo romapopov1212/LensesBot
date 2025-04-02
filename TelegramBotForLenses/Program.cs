@@ -1,22 +1,30 @@
-﻿namespace TelegramBotForLenses
+﻿using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.DependencyInjection;
+using Telegram.Bot;
+
+namespace TelegramBotForLenses
 {
     class Program
     {
-        private static void Main(string[] args)
+        private static async Task Main(string[] args)
         {
             var token = GetSettings.Token;
-            Host newBot = new Host(token);
-            newBot.Start();
-            Console.ReadLine();
+            var hostBuilder = Host.CreateDefaultBuilder(args)
+                .ConfigureServices(services =>
+                {
+                    services.AddSingleton<ITelegramBotClient>(new TelegramBotClient(token));
+                    services.AddDbContext<FileDbContext>();
+                    services.AddHostedService<ReminderBackgroundService>();
+                });
+            using var host = hostBuilder.Build();
+            await host.StartAsync();
+            HostBot mainBot = new HostBot(token);
+            mainBot.Start();
 
-            // using var db = new FileDbContext();
-            // db.Add(new Reminder()
-            // {
-            //     Message = "Fflfl",
-            //     Date = DateTime.Now,
-            // });
-            //
-            // db.SaveChanges();
+            Console.WriteLine("Бот и напоминания запущены. Нажмите Enter для выхода...");
+            Console.ReadLine();
+            
+            await host.StopAsync();
         }
     }
 }

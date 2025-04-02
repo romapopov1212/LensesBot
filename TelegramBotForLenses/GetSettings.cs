@@ -4,9 +4,9 @@ namespace TelegramBotForLenses;
 
 public static class GetSettings
 {
-    private static readonly IConfigurationRoot _config = new ConfigurationBuilder()
+    private static readonly IConfigurationRoot Config = new ConfigurationBuilder()
         .AddJsonFile("appsettings.json")
         .Build();
 
-    public static string Token => _config["BotSettings:Token"];
+    public static string Token => Config["BotSettings:Token"]!;
 }

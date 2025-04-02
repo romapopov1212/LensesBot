@@ -5,9 +5,9 @@ using Telegram.Bot.Types;
 
 namespace TelegramBotForLenses;
 
-public class Host
+public class HostBot
 {
-    public Host(string token)
+    public HostBot(string token)
     {
         _bot = new TelegramBotClient(token);
     }
@@ -32,16 +32,16 @@ public class Host
             {
                 _userStates[chatId] = "awaiting_date";
                 await bot.SendTextMessageAsync(chatId, 
-                    "Лерочка, напиши когда ты в последний раз меняла линзы(дд.мм.гг)",
+                    "Лерочка, напиши когда ты в последний раз меняла линзы(дд.мм.гг чч:мм)",
                     cancellationToken: token);
             }
             else if (_userStates.TryGetValue(chatId, out var state) && state == "awaiting_date")
             {
                 if ((DateTime.TryParseExact(messageText,
-                        "dd.MM.yy",
+                        "dd.MM.yy H:mm",
                         CultureInfo.InvariantCulture,
                         DateTimeStyles.None,
-                        out var lastChangeData)) && (lastChangeData <= DateTime.Now) && (lastChangeData <= DateTime.Now.AddDays(-14)))
+                        out var lastChangeData)) && (lastChangeData <= DateTime.Now) && (lastChangeData >= DateTime.Now.AddDays(-14)))
                 {
                     if (lastChangeData <= DateTime.Now.AddDays(-14))
                     {
@@ -58,6 +58,7 @@ public class Host
                         db.Database.ExecuteSqlRaw("DELETE FROM Reminders");
                         db.Add(new Reminder()
                         {
+                            Id = chatId,
                             Date = nextDayToChangeLenses,
                         });
                         await db.SaveChangesAsync(cancellationToken: token);
@@ -80,5 +81,5 @@ public class Host
     }
     
     private Dictionary<long, string> _userStates = new Dictionary<long, string>();
-    private readonly TelegramBotClient _bot;
+    public TelegramBotClient _bot { get; set; }
 }
