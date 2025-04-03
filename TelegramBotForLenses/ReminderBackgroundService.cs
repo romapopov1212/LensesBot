@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
 using Telegram.Bot;
 
@@ -12,20 +13,26 @@ public class ReminderBackgroundService : BackgroundService
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
-        var reminder = _db.Reminders.First();
-        var nextChangeDate = reminder.Date;
         while (!stoppingToken.IsCancellationRequested)
         {
-            if (DateTime.Now >= DateTime.SpecifyKind(nextChangeDate, DateTimeKind.Local))
+            await using var db = new FileDbContext(); // Создаем новый контекст для каждой итерации
+            var reminder = await db.Reminders.FirstOrDefaultAsync(stoppingToken);
+        
+            if (reminder != null)
             {
-                reminder = _db.Reminders.First();
-                nextChangeDate = reminder.Date;
-                await _telegramBotClient.SendTextMessageAsync(
-                    chatId: reminder.Id,
-                    $"Прошло две недели!! пора менять линзы",
-                    cancellationToken: stoppingToken);
+                var nextChangeDate = reminder.Date;
+                Console.WriteLine($"{nextChangeDate}");
+            
+                if (DateTime.Now >= DateTime.SpecifyKind(nextChangeDate, DateTimeKind.Local))
+                {
+                    await _telegramBotClient.SendTextMessageAsync(
+                        chatId: reminder.Id,
+                        $"Прошло две недели!! пора менять линзы",
+                        cancellationToken: stoppingToken);
+                }
             }
-            await Task.Delay(TimeSpan.FromMinutes(10), stoppingToken);
+        
+            await Task.Delay(TimeSpan.FromMinutes(0,5), stoppingToken);
         }
     }
     
